@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS cloud</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript"
+            src="https://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js"
+            charset="UTF-8"></script>
+</head>
+<body>
+
+<table align="center">
+    <tr>
+        <td><h2 id="message">AWS Dynamic Query and Memcache</h2></td>
+    </tr>
+    <tr>
+        <td><h3>List of Files on Amazon S3:</h3>
+            <ul>
+                {% for file in list_of_buckets %}
+                    <li>{{ file }}</li>
+                {% endfor %}
+            </ul>
+        </td>
+    </tr>
+
+     <tr>
+         <td>
+             <form action="/s3upload" method="post" enctype="multipart/form-data">
+                 <p class='description'></p><h4 id="message">Please upload file your to Amazon S3 here:</h4>
+                 <input type="file" name="s3upload">
+                 <input type="submit" value="Upload" name="Submit"><br><br>
+             </form>
+         </td>
+     </tr>
+
+     <tr>
+         <td>
+             <form action="/delete" method="post" enctype="multipart/form-data">
+                 <p class='description'></p><h4 id="message">Delete a File:</h4>
+                 Enter File Name:<input type="text" name="delete_file_name"/>
+                 <input type="submit" value="Delete File" name="Submit"><br><br>
+             </form>
+         </td>
+     </tr>
+
+     <tr>
+         <td>
+             <form action="/rdsupload" method="post" enctype="multipart/form-data">
+                 <p class='description'></p><h4 id="message">Import a csv File into Amazon RDS from Client PC:</h4>
+                 <input type="file" name="rdsupload">
+                 <input type="submit" value="Upload"><br><br>
+             </form>
+         </td>
+     </tr>
+
+    <tr>
+        <td>
+            <form action="/upload_import" method="post" enctype="multipart/form-data">
+                <p class='description'></p><h4 id="message">Upload a csv File to Amazon S3 and import it into Amazon RDS :</h4>
+                <input type="file" name="upload_import">
+                <input type="submit" value="Upload"><br><br>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS cloud</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript"
+            src="https://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js"
+            charset="UTF-8"></script>
+</head>
+<body align="center">
+<table align="center">
+	<tr>
+        <td><h2 id="message">Random Queries</h2></td>
+    </tr>
+
+    <tr> 
+         <td> 
+             <form action="/normQuery" enctype="multipart/form-data" method="post"> 
+                 Enter number of queries <input type="text" name="tuples"><br> 
+                 <button type="submit">Query</button> 
+             </form> 
+             <br> 
+         </td> 
+     </tr>
+	
+	
+    <tr>
+        <td>
+            Time taken to insert the data = {{ DBtime }}
+        </td>
+    </tr>
+	
+    <tr>
+        <td>
+            <form action="/updateColumnData" method="post">
+             Enter Column to update <input type="text" name="column2update">
+                 <input type="submit"  value="Update Column"><br>
+                </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form action="/removeCanada" method="post">
+                 <input type="submit"  value="Remove Canada"><br>
+                </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <form action="/userQuery" method="post">
+                <input type="submit" value="User Gen Query">
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <form action="/userQueryMemCache" method="post">
+                <input type="submit" value="User Gen MemcacheQuery">
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+             <form action="/sameColumns" method="post">
+                <input type="submit" value="Columns with similar values">
+            </form>
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

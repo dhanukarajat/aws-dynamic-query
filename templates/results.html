@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AWS cloud</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript"
+            src="https://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js"
+            charset="UTF-8"></script>
+</head>
+<body align="center">
+<table align="center" border="1">
+	<tr>
+        <td><h2 id="message">Results</h2></td>
+    </tr>
+	<tr>
+		<td>Time Taken : {{ res }}</td>
+	</tr>
+	{% for row in records %}
+		<tr>
+			{% for i in row %}
+				<td>{{ i }}</td>
+			{% endfor %}
+		</tr>
+	{% endfor %}
+    </table>
+</body>
+</html>

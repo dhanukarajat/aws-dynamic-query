@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Query</title>
+</head>
+<body align="center">
+<form action="/user_query" method="post">
+
+    <table border="1" align="center">
+        {% for row in records %}
+            <tr>
+                {% for i in row %}
+                    <td>{{ i }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <tr>
+        <td>
+            Time Taken : {{ res }}
+        </td>
+    </tr>
+    <table align="center">
+        <form action="/user_query" method="post">
+            <tr>
+                <td>
+                    Enter Country Name: <input type="text" name="countryname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Query 1: <input type="text" name="query1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Query 2: <input type="text" name="query2">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Perform Query"></td>
+            </tr>
+        </form>
+    </table>
+</form>
+</body>
+</html>
